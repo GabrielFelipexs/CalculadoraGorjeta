@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Calculadora de grojetas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div id="container">
+    <div>
+        <h1 class="title "><b>Calculadora de gorjetas</b></h1>
+    </div>
+    <div>
+        <form class="tipsForm" id="tipsForm">
+            <div class="input-group">
+            <div class="m-1 w-100">  
+            <label for="conta">
+                <p>Qual valor total da conta?</p>
+            </label>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">R$</span>
+                <input type="number" class="form-control" id="conta" placeholder="10">
+              </div>
+
+            </div> 
+            <div class="m-1 w-100">
+            <label for="servicoqual">
+                <p>Qual valor de Gorjeta gostaria de dar?</p>
+            </label>
+            <p>
+                <select name="servicoqual" id="servicoqual" class="formSelect form-select" required>
+                    <option disable selected value="0">-- Escolha um opcao --</option>
+                    <option value="0.3">30% - Incrivel</option>
+                    <option value="0.2" >20% - Bom</option>
+                    <option value="0.15">15% - Mediano</option>
+                    <option value="0.1">10% - Ruim</option>
+                    <option value="0.05">5%  - Horrivel</option>
+                </select>
+            </p>
+        </div>
+            <div class="m-1 w-100">
+            <label for="pessoas">
+                <p>Quantas pessoas vão dividir a conta?</p>
+            </label>
+            <p>
+                <input type="number" placeholder="5" class="form-control" min="1" name="pessoas" id="pessoas" class="formInput" required>
+            </p>
+            </div>
+            <div class="text-center w-100">
+            <button type="submit" type="button" class="btn btn-primary" >Calcular</button>
+            </div>
+        </div>
+        </form>
+    </div>
+    <div id="totalTips">
+       <div> Gorjeta Total:
+        R$ <span id="tip">0,00</span>
+        <span id="each">cada</span>
+       </div>
+       <div>  Total a pagar:
+        R$ <span id="tip_total">0,00</span>
+       </div>
+    </div>
+    </div>
+</div>
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
